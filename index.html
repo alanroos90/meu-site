@@ -214,7 +214,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planetas do Sistema Solar</title>
-    <!-- Favicon de Planeta -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Earth_icon.svg/64px-Earth_icon.svg.png" type="image/png">
     <style>
         body {
@@ -241,6 +240,9 @@
             padding: 15px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            opacity: 0;
+            transform: scale(0.95);
+            animation: fadeInZoom 0.8s forwards;
         }
         .card img {
             width: 100%;
@@ -254,6 +256,22 @@
         .card p {
             color: #ccc;
         }
+
+        /* ANIMAÇÃO FADE IN + ZOOM */
+        @keyframes fadeInZoom {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Delay nos cards */
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(6) { animation-delay: 0.6s; }
     </style>
 </head>
 <body>
@@ -302,4 +320,112 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetas e Habitação Humana</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Earth_icon.svg/64px-Earth_icon.svg.png" type="image/png">
+    <style>
+        body {
+            background: #0b0f1a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: #1b1f2a;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .card h2 {
+            margin: 10px 0;
+            color: #00d8ff;
+        }
+        .card p {
+            color: #ccc;
+        }
+        .highlight {
+            color: #00ff7f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
 
+    <h1>Planetas do Sistema Solar e a Possibilidade de Habitação Humana</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="Mercúrio">
+            <h2>Mercúrio</h2>
+            <p>Mercúrio é o planeta mais próximo do Sol. Suas temperaturas variam de -170°C à noite a 430°C durante o dia.</p>
+            <p class="highlight">Habitação Humana: Impossível</p>
+            <p>Não possui atmosfera significativa e as temperaturas extremas tornam a vida impossível.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Marte">
+            <h2>Marte</h2>
+            <p>Conhecido como o "Planeta Vermelho", Marte tem água congelada em seus polos e uma atmosfera fina composta de CO2.</p>
+            <p class="highlight">Habitação Humana: Possível no Futuro</p>
+            <p>Com tecnologias de colonização (cúpulas, geração de oxigênio e proteção contra radiação), Marte é o principal candidato para futuras colônias humanas.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Júpiter">
+            <h2>Júpiter</h2>
+            <p>O maior planeta do Sistema Solar, Júpiter é um gigante gasoso sem superfície sólida e com tempestades intensas.</p>
+            <p class="highlight">Habitação Humana: Impossível</p>
+            <p>Por ser composto de gases e possuir gravidade extrema, Júpiter não oferece condições para habitação. No entanto, algumas de suas luas (como Europa) são estudadas como possíveis locais de vida microscópica.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturno">
+            <h2>Saturno</h2>
+            <p>Famoso por seus anéis de gelo, Saturno é outro gigante gasoso, sem superfície sólida e com condições atmosféricas extremas.</p>
+            <p class="highlight">Habitação Humana: Impossível</p>
+            <p>Sem superfície onde pousar e com ventos supersônicos, Saturno não é habitável. Porém, sua lua Titã possui atmosfera densa e é alvo de estudos para exploração futura.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Urano">
+            <h2>Urano</h2>
+            <p>Urano é um gigante de gelo, com atmosfera de hidrogênio, hélio e metano, o que dá a ele sua coloração azul-esverdeada.</p>
+            <p class="highlight">Habitação Humana: Impossível</p>
+            <p>Não possui superfície sólida e temperaturas médias de -224°C, as mais baixas do Sistema Solar.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" alt="Netuno">
+            <h2>Netuno</h2>
+            <p>O planeta mais distante do Sol, conhecido por seus ventos que podem atingir até 2.100 km/h e sua cor azul intensa.</p>
+            <p class="highlight">Habitação Humana: Impossível</p>
+            <p>Assim como Urano, não possui superfície sólida e seu ambiente é hostil à vida como conhecemos.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
